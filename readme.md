@@ -14,25 +14,28 @@ Image of a Powermeter with a current transformer (CT)
 ### Hands-ON Instruction: 
 #### 1. Install the software and connect the device
 1. Download and install the Modbus tools.
-2. Plug-in the USB/RS485 converter (install the USB/RS485 converter driver, CH340 if necessary)
+2. Plug in the USB/RS485 converter (install the USB/RS485 converter driver, CH340 if necessary)
 #### (Optional) Test the converters by connecting one to each end of the communication cable.
 ![Alt text](https://github.com/iiotntust/1121modbus/blob/main/DSC_0388.JPG)
 1. Connect the black conductor to A and the white conductor to B in the USB/RS485 converters' terminals.
-2. Connect each conventer to the computer. Two free USB ports are necessary.
+2. Connect each converter to the computer. Two free USB ports are necessary.
 3. Open two Realterm instances and configure each with the appropriate COM port set by the OS.
-4. If the terminals and converters are configured correctly, when text is typed in one terminal,
-5. It should appear inside the other. Remember to close the RealTerm programs after use as they will interfere with other programs will use the converters.
+4. If the terminals and converters are configured correctly when text is typed in one terminal,
+5. It should appear inside the other. Remember to close the RealTerm programs after use, as they will interfere with other programs that will use the converters.
 #### 2. First PC-to-PC
 1. Configure ModbusSlave on PC#1 for creating registers data
 2. Use PC#2 with ModbusPoll to read the data from PC#1
 #### 3. PC-to-PowerMeter
 1. Use read power meter voltage and current by PC with ModbusPoll
 #### 4. Read data of both humi-temp sensor and powermeter
-1. wiring and setting (ID:1 Humi-temp sensor, ID:2 Power Meter);Manual can be found in "device_manual", 溫濕度計 and Peacefair電表)
+0. Change device ID (default ID =1)
+    - Change Temp/Humi (manual)
+    - Change Powermeter (manual)
+2. wiring and setting (ID:1 Humi-temp sensor, ID:2 Power Meter); Manual can be found in "device_manual," 溫濕度計 and Peacefair電表)
 ![S__88981511](https://github.com/iiotntust/1121modbus/assets/56021651/3f29d30f-97e3-4a5a-bf7d-8fee5a503cb7)
-2. Connection setting and reading 
+3. Connection setting and reading 
    <img width="315" alt="image" src="https://github.com/iiotntust/1121modbus/assets/56021651/05386cf5-e2be-4fa9-bdc4-28c1c59fbddc">.
-3. Use ModbusPull read the data from both Humi-Temp sensor and Powermeter
+4. Use ModbusPull read the data from both Humi-Temp sensor and Powermeter
    <img width="610" alt="image" src="https://github.com/iiotntust/1121modbus/assets/56021651/a6ed6a19-ab37-4838-aa27-eb7162716de0">.
    
 ### Recovery point setting (conduct the setting before you install the software)
